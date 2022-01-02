@@ -1,10 +1,10 @@
   isPossibleToCarry x y 
-    | x <= y ="It is possible to make"
+    | x <= y ="It is possible to carry"
     | otherwise = "The load is too large"
 
   isPossibleToCarry1 x y =
      if x<=y
-     then "It is possible to make"
+     then "It is possible to carry"
      else "The load is too large"
 
   main = do
