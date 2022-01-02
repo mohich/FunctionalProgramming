@@ -15,11 +15,9 @@
    let areaToCover = read input1 :: Double
    input2 <- getLine
    let lenghts = read input2 :: [Double]
-   --let lenghts = [10,15,20,25,30]
    input3 <- getLine
    let countsPerPacket = read input3 :: [Double]
-   --let countsPerPacket = [20,20,15,12,10]
-
+   
    let pieceArea = squaringList lenghts
    let areasPerPacket = zipWith (*) pieceArea countsPerPacket
    let rec = map(recip) areasPerPacket
