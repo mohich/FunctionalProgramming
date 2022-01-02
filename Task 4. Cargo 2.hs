@@ -1,4 +1,4 @@
-isPossibleToMade x y 
+ isPossibleToMade x y 
    | x <= y ="It is possible to make"
    | otherwise = "The materials are not enough"
  isPossibleToMade1 x y =
@@ -22,3 +22,4 @@ isPossibleToMade x y
    print(totalArea)
    print(isPossibleToMade totalArea materials)
    print(isPossibleToMade1 totalArea materials) -- alternatively
+   

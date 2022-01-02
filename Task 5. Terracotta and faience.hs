@@ -1,4 +1,4 @@
-squaringList list = 
+ squaringList list = 
      if null list
      then []
      else ((head list) * (head list) : (squaringList (tail list)))

@@ -1,9 +1,13 @@
- isPossibleToCarry1 x y =
+  isPossibleToCarry x y 
+    | x <= y ="It is possible to make"
+    | otherwise = "The load is too large"
+
+  isPossibleToCarry1 x y =
      if x<=y
-     then "It is possible to carry"
+     then "It is possible to make"
      else "The load is too large"
 
- main = do
+  main = do
    input <- getLine
    let tankerVolume = read input :: Float
 
@@ -22,3 +26,5 @@
    let totalVolumes = zipWith(\ a tC -> a * tC) volumes tankCounts
    let totalVolume = foldl (+) 0 totalVolumes
    print(totalVolume)
+   print(isPossibleToCarry totalVolume tankerVolume)
+   print(isPossibleToCarry1 totalVolume tankerVolume) -- alternatively
